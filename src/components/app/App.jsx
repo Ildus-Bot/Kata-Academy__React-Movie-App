@@ -28,7 +28,7 @@ export default class App extends React.Component {
       .then((result) => {
         this.setStateGenres(result.genres);
       })
-      .catch((error) => {
+      .catch(() => {
         this.setState({
           isError: true,
         });
@@ -38,8 +38,10 @@ export default class App extends React.Component {
       return;
     }
 
-    this.MovieServices.createGuestSession().catch((error) => {
-      throw new Error('Could not create guest session', error);
+    this.MovieServices.createGuestSession().catch(() => {
+      this.setState({
+        isError: true,
+      });
     });
   }
 

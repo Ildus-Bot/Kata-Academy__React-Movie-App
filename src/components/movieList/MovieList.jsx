@@ -13,7 +13,7 @@ export default class MovieList extends React.Component {
   state = {
     movies: undefined,
     errorText: '',
-    isUserClickOnRate: false,
+    isUserClickOnRate: localStorage.getItem('isUserClickOnRate'),
   };
 
   componentDidUpdate = (prevProps) => {
@@ -63,6 +63,15 @@ export default class MovieList extends React.Component {
   };
 
   getRatedMoviesAndUpdateDateAndState = (page) => {
+    if (!this.state.isUserClickOnRate) {
+      this.setState({
+        movies: [],
+        errorText: '',
+      });
+
+      return;
+    }
+
     this.MovieServices.getRatedMovies(page)
       .then((movies) => {
         if (page === 1) {
@@ -124,9 +133,7 @@ export default class MovieList extends React.Component {
       return;
     }
 
-    this.setState({
-      isUserClickOnRate: true,
-    });
+    localStorage.setItem('isUserClickOnRate', true);
   };
 
   handleError = (error) => {

@@ -2,10 +2,8 @@ import React from 'react';
 import { format } from 'date-fns';
 import { Rate, Spin } from 'antd';
 
-import MovieServices from '../../services/MovieServices';
-import { GenresConsumer } from '../GenresContext';
 import ErrorOnAllMovieCard from '../ErrorOnAllMovieCard';
-
+import { GenresConsumer } from '../GenresContext';
 import './Movie.css';
 import noPhoto from '../../assets/images/not-photo.webp';
 
