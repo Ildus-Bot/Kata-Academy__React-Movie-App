@@ -1,0 +1,16 @@
+.error-on-all-window {
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #eee;
+  padding-top: 40vh;
+}
+
+.error-on-all-window__text {
+  font-size: 50px;
+  color: tomato;
+  text-align: center;
+}

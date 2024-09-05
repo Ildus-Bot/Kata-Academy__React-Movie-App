@@ -1,0 +1,25 @@
+.tabs {
+  display: flex;
+  width: 146px;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border-bottom: 1px solid #d9d9d9;
+  box-sizing: border-box;
+}
+
+.tabs__button {
+  display: inline-block;
+  width: 65px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border: none;
+  background: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+
+.selected {
+  border-bottom: 2px solid rgba(24, 144, 255, 1);
+  transition: all 0.5s ease-out;
+}

@@ -1,0 +1,42 @@
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../assets/fonts/inter-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+body {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 12px;
+  background-color: #f7f7f7;
+}
+
+#root {
+  max-width: 1010px;
+  background-color: white;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  max-width: 972px;
+  padding: 0 16px 0 16px;
+  margin: 0 auto;
+}
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.ant-pagination {
+  margin-top: auto;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}

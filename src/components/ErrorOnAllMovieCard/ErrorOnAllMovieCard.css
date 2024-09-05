@@ -1,0 +1,14 @@
+.error-on-all-movie-card {
+  box-sizing: border-box;
+  display: block;
+  height: 280px;
+  padding-top: 100px;
+  background-color: #eee;
+}
+
+.error-on-all-movie-card__text {
+  text-align: center;
+  font-size: 25px;
+  padding: 0 20px 0 20px;
+  color: tomato;
+}
